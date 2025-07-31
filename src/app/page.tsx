@@ -1,7 +1,7 @@
 import { Navigation } from '@/components/ui/navigation'
 import { HeroSection } from '@/components/ui/hero-section'
 import { VideoCTASection } from '@/components/ui/video-cta-section'
-import { CTASection } from '@/components/ui/cta-section'
+
 import { WhyChooseUsSection } from '@/components/ui/why-choose-us-section'
 import { UseCaseSection } from '@/components/ui/use-case-section'
 import { TestimonialsSection } from '@/components/ui/testimonials-section'
@@ -11,7 +11,7 @@ import { VelocityScroll } from '@/components/magicui/scroll-based-velocity'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background pt-20">
       {/* Navigation */}
       <Navigation />
       
@@ -21,8 +21,7 @@ export default function Home() {
       {/* 2. Video + CTA Section */}
       <VideoCTASection />
       
-      {/* 3. CTA Section */}
-      <CTASection />
+
       
       {/* 3. Section "Pourquoi nous choisir" */}
       <WhyChooseUsSection />

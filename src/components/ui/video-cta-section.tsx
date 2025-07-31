@@ -17,16 +17,32 @@ export function VideoCTASection() {
          <Meteors number={25} angle={160} minDuration={2} maxDuration={6} />
        </div>
       
-      {/* Fondu en haut pour transition avec la hero section */}
-      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-gray-900 to-transparent z-15"></div>
-      {/* Fondu en bas pour transition avec la section suivante */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-900 to-transparent z-15"></div>
+      {/* Séparateur discret en bas */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent z-15"></div>
       
       <div className="container mx-auto px-4 text-center text-white z-20 max-w-6xl">
         {/* Header */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Découvrez Webstate en action
+            Découvrez{" "}
+            <div className="relative inline-block ml-2">
+              <span className="relative z-10">Webstate</span>
+              <svg 
+                className="absolute -bottom-4 left-0 w-full h-4 z-0" 
+                viewBox="0 0 100 15" 
+                preserveAspectRatio="none"
+              >
+                <path 
+                  d="M0,8 C20,2 40,12 60,4 80,10 100,6 100,8" 
+                  stroke="#16a34a" 
+                  strokeWidth="7" 
+                  fill="none" 
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            {" "}en action
           </h2>
           
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300">
@@ -34,14 +50,25 @@ export function VideoCTASection() {
           </p>
         </div>
         
-        {/* Vidéo centrée */}
-        <div className="flex justify-center mb-12">
-          <div className="w-full max-w-4xl">
-            <HeroVideoDialog
-              videoSrc="https://www.youtube.com/embed/mAGW3izg0hk"
-              thumbnailSrc="https://img.youtube.com/vi/mAGW3izg0hk/maxresdefault.jpg"
-              thumbnailAlt="Démonstration Webstate - Automatisation IA"
-            />
+        {/* Vidéo centrée avec effet glow aura */}
+        <div className="flex justify-center mb-12 relative">
+          {/* Effet glow aura en arrière-plan */}
+          <div className="absolute top-1/2 left-1/2 w-[800px] h-[500px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-green-500/20 via-emerald-500/15 to-white/20 blur-[100px] rounded-full z-0 animate-pulse"></div>
+          <div className="absolute top-1/2 left-1/2 w-[600px] h-[400px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-br from-green-400/15 via-green-500/10 to-white/15 blur-[80px] rounded-full z-0 animate-pulse" style={{animationDelay: '1s'}}></div>
+          
+          {/* Container vidéo avec effet glow */}
+          <div className="relative z-10 w-full max-w-4xl">
+            <div className="relative">
+              {/* Glow autour du lecteur vidéo */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-green-500/30 via-emerald-500/20 to-white/30 blur-2xl rounded-2xl z-0"></div>
+              <div className="relative z-10">
+                <HeroVideoDialog
+                  videoSrc="https://www.youtube.com/embed/mAGW3izg0hk"
+                  thumbnailSrc="https://img.youtube.com/vi/mAGW3izg0hk/maxresdefault.jpg"
+                  thumbnailAlt="Démonstration Webstate - Automatisation IA"
+                />
+              </div>
+            </div>
           </div>
         </div>
         

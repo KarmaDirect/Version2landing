@@ -1,25 +1,46 @@
+import { NeonGradientCard } from "@/components/magicui/neon-gradient-card"
+import { Meteors } from "@/components/magicui/meteors"
+import { AnimatedBeamDemo } from "@/components/ui/animated-beam-demo"
+
 export function WhyChooseUsSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 relative overflow-hidden py-20">
-      <div className="container mx-auto px-4 text-center text-white z-10">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden py-20 z-20 px-4">
+      {/* Overlay sombre pour plus d'impact */}
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      
+      {/* Animations de météores sur les côtés */}
+      <div className="absolute left-0 top-0 h-full w-1/2 z-5">
+        <Meteors number={25} angle={200} minDuration={2} maxDuration={6} />
+      </div>
+      <div className="absolute right-0 top-0 h-full w-1/2 z-5">
+        <Meteors number={25} angle={160} minDuration={2} maxDuration={6} />
+      </div>
+      
+      {/* Séparateur discret en haut */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent z-15"></div>
+      {/* Fondu en bas pour transition avec la section suivante */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-900 to-transparent z-15"></div>
+      
+      <div className="container mx-auto px-4 text-center text-white z-20">
         <h2 className="text-4xl md:text-6xl font-bold mb-8 relative">
           Pourquoi choisir{" "}
-          <span className="relative">
-            Webstate
-            <svg
-              className="absolute -bottom-2 left-0 w-full"
-              viewBox="0 0 100 20"
-              xmlns="http://www.w3.org/2000/svg"
+          <div className="relative inline-block ml-2">
+            <span className="relative z-10">Webstate</span>
+            <svg 
+              className="absolute -bottom-4 left-0 w-full h-4 z-0" 
+              viewBox="0 0 100 15" 
+              preserveAspectRatio="none"
             >
-              <path
-                d="M0,10 C25,0 75,20 100,10"
-                stroke="#16a34a"
-                strokeWidth="6"
-                fill="none"
+              <path 
+                d="M0,8 C20,2 40,12 60,4 80,10 100,6 100,8" 
+                stroke="#16a34a" 
+                strokeWidth="7" 
+                fill="none" 
                 strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
-          </span>{" "}
+          </div>{" "}
           ?
         </h2>
         
@@ -29,36 +50,72 @@ export function WhyChooseUsSection() {
         
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Bloc 1 - IA Avancée */}
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-3xl">🤖</span>
-            </div>
-            <h3 className="text-2xl font-bold mb-4">IA Avancée</h3>
-            <p className="text-gray-300 leading-relaxed">
-              Automatisations intelligentes basées sur l&apos;intelligence artificielle de pointe pour optimiser vos processus
-            </p>
+          <div className="relative">
+            <NeonGradientCard 
+              className="h-full"
+              neonColors={{
+                firstColor: "#16a34a",
+                secondColor: "#ffffff"
+              }}
+              borderSize={2}
+              borderRadius={20}
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🤖</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-white">IA Avancée</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Automatisations intelligentes basées sur l&apos;intelligence artificielle de pointe pour optimiser vos processus
+                </p>
+              </div>
+            </NeonGradientCard>
           </div>
           
           {/* Bloc 2 - Clé en Main */}
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-3xl">⚡</span>
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Clé en Main</h3>
-            <p className="text-gray-300 leading-relaxed">
-              Site web + automatisations : tout est inclus et prêt à l&apos;emploi en moins de 2 semaines
-            </p>
+          <div className="relative">
+            <NeonGradientCard 
+              className="h-full"
+              neonColors={{
+                firstColor: "#16a34a",
+                secondColor: "#ffffff"
+              }}
+              borderSize={2}
+              borderRadius={20}
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">⚡</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-white">Clé en Main</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Site web + automatisations : tout est inclus et prêt à l&apos;emploi en moins de 2 semaines
+                </p>
+              </div>
+            </NeonGradientCard>
           </div>
           
           {/* Bloc 3 - ROI Garanti */}
-          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="text-3xl">📈</span>
-            </div>
-            <h3 className="text-2xl font-bold mb-4">ROI Garanti</h3>
-            <p className="text-gray-300 leading-relaxed">
-              Résultats mesurables et retour sur investissement rapide avec un ROI moyen de 250%
-            </p>
+          <div className="relative">
+            <NeonGradientCard 
+              className="h-full"
+              neonColors={{
+                firstColor: "#16a34a",
+                secondColor: "#ffffff"
+              }}
+              borderSize={2}
+              borderRadius={20}
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">📈</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-white">ROI Garanti</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Résultats mesurables et retour sur investissement rapide avec un ROI moyen de 250%
+                </p>
+              </div>
+            </NeonGradientCard>
           </div>
         </div>
         
