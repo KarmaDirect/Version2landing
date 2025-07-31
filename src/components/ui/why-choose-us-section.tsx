@@ -48,76 +48,86 @@ export function WhyChooseUsSection() {
           Découvrez les avantages qui font de Webstate la solution d&apos;automatisation IA la plus performante
         </p>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {/* Bloc 1 - IA Avancée */}
-          <div className="relative">
-            <NeonGradientCard 
-              className="h-full"
-              neonColors={{
-                firstColor: "#16a34a",
-                secondColor: "#ffffff"
-              }}
-              borderSize={2}
-              borderRadius={20}
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🤖</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">IA Avancée</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Automatisations intelligentes basées sur l&apos;intelligence artificielle de pointe pour optimiser vos processus
-                </p>
-              </div>
-            </NeonGradientCard>
-          </div>
-          
-          {/* Bloc 2 - Clé en Main */}
-          <div className="relative">
-            <NeonGradientCard 
-              className="h-full"
-              neonColors={{
-                firstColor: "#16a34a",
-                secondColor: "#ffffff"
-              }}
-              borderSize={2}
-              borderRadius={20}
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">⚡</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Clé en Main</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Site web + automatisations : tout est inclus et prêt à l&apos;emploi en moins de 2 semaines
-                </p>
-              </div>
-            </NeonGradientCard>
-          </div>
-          
-          {/* Bloc 3 - ROI Garanti */}
-          <div className="relative">
-            <NeonGradientCard 
-              className="h-full"
-              neonColors={{
-                firstColor: "#16a34a",
-                secondColor: "#ffffff"
-              }}
-              borderSize={2}
-              borderRadius={20}
-            >
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">📈</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">ROI Garanti</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Résultats mesurables et retour sur investissement rapide avec un ROI moyen de 250%
-                </p>
-              </div>
-            </NeonGradientCard>
-          </div>
-        </div>
+                            {/* Démonstration AnimatedBeam */}
+                    <div className="mb-16">
+                      <h3 className="text-2xl font-bold mb-8 text-white text-center">
+                        Intégrations et Automatisations
+                      </h3>
+                      <div className="max-w-4xl mx-auto">
+                        <AnimatedBeamDemo />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8 mb-16">
+                      {/* Bloc 1 - IA Avancée */}
+                      <div className="relative">
+                        <NeonGradientCard
+                          className="h-full"
+                          neonColors={{
+                            firstColor: "#16a34a",
+                            secondColor: "#ffffff"
+                          }}
+                          borderSize={2}
+                          borderRadius={20}
+                        >
+                          <div className="text-center">
+                            <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                              <span className="text-3xl">🤖</span>
+                            </div>
+                            <h3 className="text-2xl font-bold mb-4 text-white">IA Avancée</h3>
+                            <p className="text-gray-300 leading-relaxed">
+                              Automatisations intelligentes basées sur l&apos;intelligence artificielle de pointe pour optimiser vos processus
+                            </p>
+                          </div>
+                        </NeonGradientCard>
+                      </div>
+
+                      {/* Bloc 2 - Clé en Main */}
+                      <div className="relative">
+                        <NeonGradientCard
+                          className="h-full"
+                          neonColors={{
+                            firstColor: "#16a34a",
+                            secondColor: "#ffffff"
+                          }}
+                          borderSize={2}
+                          borderRadius={20}
+                        >
+                          <div className="text-center">
+                            <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                              <span className="text-3xl">⚡</span>
+                            </div>
+                            <h3 className="text-2xl font-bold mb-4 text-white">Clé en Main</h3>
+                            <p className="text-gray-300 leading-relaxed">
+                              Site web + automatisations : tout est inclus et prêt à l&apos;emploi en moins de 2 semaines
+                            </p>
+                          </div>
+                        </NeonGradientCard>
+                      </div>
+
+                      {/* Bloc 3 - ROI Garanti */}
+                      <div className="relative">
+                        <NeonGradientCard
+                          className="h-full"
+                          neonColors={{
+                            firstColor: "#16a34a",
+                            secondColor: "#ffffff"
+                          }}
+                          borderSize={2}
+                          borderRadius={20}
+                        >
+                          <div className="text-center">
+                            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                              <span className="text-3xl">📈</span>
+                            </div>
+                            <h3 className="text-2xl font-bold mb-4 text-white">ROI Garanti</h3>
+                            <p className="text-gray-300 leading-relaxed">
+                              Résultats mesurables et retour sur investissement rapide avec un ROI moyen de 250%
+                            </p>
+                          </div>
+                        </NeonGradientCard>
+                      </div>
+                    </div>
         
         {/* Statistiques supplémentaires */}
         <div className="grid grid-cols-4 gap-8 max-w-4xl mx-auto">
