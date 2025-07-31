@@ -1,0 +1,159 @@
+# 🚀 Webstate SaaS - Landing Page Development Rules
+
+## 🎯 Objectif Principal
+Créer une landing page professionnelle, immersive, très design et animée pour Webstate (SaaS d'automatisation IA) qui :
+- Inspire la confiance
+- Met en avant la technologie (automatisation, IA)
+- Renforce la conversion
+- A un design soigné, animé mais lisible
+- Est responsive (mobile + desktop)
+
+## 📐 Structure de la Landing Page
+
+### 1. **Hero Section**
+- Texte impactant + animation visuelle stylée
+- Titre principal accrocheur
+- Sous-titre explicatif
+- CTA principal
+
+### 2. **CTA Section**
+- Bouton d'action (prise de RDV)
+- Design attractif et conversion-focused
+
+### 3. **Section "Pourquoi nous choisir"**
+- 2 ou 3 blocs avec illustrations animées
+- Avantages concurrentiels
+- Technologies mises en avant
+
+### 4. **Section "Cas d'usage"** (4 parties)
+1. **Témoignage client** entreprise artisanale
+2. **Tableau des problèmes concrets** rencontrés
+3. **Tableau des automatisations IA** mises en place avec Webstate
+4. **Résultats chiffrés** (RDV gagnés, économies, ROI)
+- Utiliser des icônes
+- Fond gris clair ou animé avec MagicUI (ex: warp-background)
+- Blocs bien séparés
+- Style professionnel et conversion
+
+### 5. **Section témoignages ou résultats**
+- Social proof
+- Métriques de succès
+
+### 6. **Section pricing ou "commencer maintenant"**
+- Offres et tarifs
+- CTA final
+
+### 7. **Footer sobre mais stylé**
+- Informations de contact
+- Liens légaux
+- Design cohérent
+
+## 🎨 Contraintes UI/UX Strictes
+
+### ✅ OBLIGATOIRE - Utiliser MagicUI
+- **TOUS** les composants doivent venir de MagicUI
+- Utiliser la commande : `/mcp_magicui_[nom_du_composant]`
+- Exemples : `/mcp_magicui_globe`, `/mcp_magicui_aurora_text`, `/mcp_magicui_shiny_button`
+
+### ❌ INTERDICTIONS ABSOLUES
+- ❌ Importer un package npm
+- ❌ Créer des composants en dehors de MagicUI
+- ❌ Générer des styles bruts sans Tailwind
+- ❌ Appeler une animation CSS custom
+- ❌ Ajouter des assets externes (SVG, polices ou images)
+- ❌ Modifier les couleurs des composants MagicUI (utiliser exactement comme sur le site officiel)
+
+## 📁 Architecture de Fichiers
+
+```
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx                → Landing page principale
+│   └── globals.css             → Styles globaux + variables CSS
+├── components/
+│   ├── magicui/                → Composants MagicUI (via MCP ou JSON)
+│   └── ui/                     → Composants UI internes ou shadcn
+├── lib/
+│   └── utils.ts                → Fonction cn() pour fusionner les classes
+```
+
+## 🔧 Règles Techniques
+
+### Imports
+- Utiliser les imports relatifs via `@/components/…`
+- Tous les composants dans `/components/ui/` ou `/components/magicui/`
+- Pages dans `/app/` (Next.js app router)
+
+### JSX et Apostrophes
+- Dans les chaînes JSX : utiliser `&apos;` ou `&#39;` pour les apostrophes
+- Dans les objets JavaScript : apostrophes normales avec échappement `\'`
+
+### Composants MagicUI
+- Ajouter un composant à la fois
+- Description explicite de l'emplacement et de la raison
+- Validation requise avant de passer au suivant
+- En cas de problème : revenir à la version précédente
+
+### Développement
+- Lancer l'application localement pour voir les modifications en temps réel
+- Mode composant : tout doit être modulaire
+- UX SaaS haut de gamme
+- Animations de scroll (sticky, reveal) si disponibles dans MagicUI
+- Interactions hover/click si disponibles dans MagicUI
+
+## 🚨 Gestion des Composants Manquants
+
+Si un composant MagicUI nécessaire n'existe pas :
+> "As-tu un composant MagicUI à me donner pour [X] ? Sinon, veux-tu que je te propose une version simplifiée avec Tailwind + Framer Motion ?"
+
+## 📋 Checklist de Validation
+
+- [ ] Architecture de fichiers respectée
+- [ ] Tous les composants viennent de MagicUI
+- [ ] Aucun import npm externe
+- [ ] Design responsive (mobile + desktop)
+- [ ] Animations et interactions appropriées
+- [ ] Structure en 7 sections respectée
+- [ ] Section cas d'usage avec 4 parties
+- [ ] Style professionnel SaaS haut de gamme
+- [ ] Conversion optimisée
+- [ ] Code compilable et intégré
+
+## 🎯 Priorités de Développement
+
+1. **Phase 1** : Architecture et structure de base
+2. **Phase 2** : Hero section avec animations
+3. **Phase 3** : Sections de contenu principales
+4. **Phase 4** : Section cas d'usage détaillée
+5. **Phase 5** : Optimisations et finitions
+
+## 💡 Composants MagicUI Recommandés
+
+### Animations et Effets
+- `aurora-text` - Titres animés
+- `warp-background` - Arrière-plans animés
+- `globe` - Éléments visuels tech
+- `shiny-button` - Boutons CTA
+- `animated-beam` - Effets de connexion
+- `meteors` - Effets visuels
+
+### Layout et Structure
+- `bento-grid` - Grilles de contenu
+- `dock` - Navigation
+- `scroll-progress` - Indicateur de progression
+- `animated-list` - Listes animées
+
+### Textes et Typographie
+- `text-animate` - Animations de texte
+- `typing-animation` - Effet machine à écrire
+- `number-ticker` - Compteurs animés
+
+### Interactions
+- `ripple-button` - Boutons interactifs
+- `shimmer-button` - Effets de brillance
+- `interactive-hover-button` - Hover effects
+
+---
+
+**Note** : Ce fichier doit être consulté à chaque modification pour s'assurer du respect des contraintes et de la cohérence du projet. 
