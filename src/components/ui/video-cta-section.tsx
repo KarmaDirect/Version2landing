@@ -5,7 +5,7 @@ import { ShinyButton } from '@/components/magicui/shiny-button'
 
 export function VideoCTASection() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden py-20 z-20">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden py-20 z-20 px-4">
       {/* Overlay sombre pour plus d'impact */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
       

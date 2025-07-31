@@ -2,8 +2,25 @@ export function WhyChooseUsSection() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 relative overflow-hidden py-20">
       <div className="container mx-auto px-4 text-center text-white z-10">
-        <h2 className="text-4xl md:text-6xl font-bold mb-8">
-          Pourquoi choisir Webstate ?
+        <h2 className="text-4xl md:text-6xl font-bold mb-8 relative">
+          Pourquoi choisir{" "}
+          <span className="relative">
+            Webstate
+            <svg
+              className="absolute -bottom-2 left-0 w-full"
+              viewBox="0 0 100 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0,10 C25,0 75,20 100,10"
+                stroke="#16a34a"
+                strokeWidth="6"
+                fill="none"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>{" "}
+          ?
         </h2>
         
         <p className="text-xl md:text-2xl mb-16 max-w-3xl mx-auto text-gray-300">

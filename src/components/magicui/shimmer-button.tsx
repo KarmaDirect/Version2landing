@@ -20,8 +20,8 @@ export const ShimmerButton = React.forwardRef<
     {
       shimmerColor = "#ffffff",
       shimmerSize = "0.05em",
-      shimmerDuration = "3s",
-      borderRadius = "100px",
+      shimmerDuration = "5s",
+      borderRadius = "90px",
       background = "rgba(0, 0, 0, 1)",
       className,
       children,
@@ -57,7 +57,7 @@ export const ShimmerButton = React.forwardRef<
           )}
         >
           {/* spark */}
-          <div className="absolute inset-0 h-[100cqh] animate-shimmer-slide [aspect-ratio:1] [border-radius:0] [mask:none]">
+                     <div className="absolute inset-0 h-[100cqh] animate-shimmer-slide [border-radius:0] [mask:none]">
             {/* spark before */}
             <div className="absolute -inset-full w-auto rotate-0 animate-spin-around [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,var(--shimmer-color)_var(--spread),transparent_var(--spread))] [translate:0_0]" />
           </div>

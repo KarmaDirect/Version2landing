@@ -3,6 +3,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { ShinyButton } from '@/components/magicui/shiny-button'
+import { ShimmerButton } from '@/components/magicui/shimmer-button'
 
 export function Navigation() {
   const [isSolutionsOpen, setIsSolutionsOpen] = React.useState(false)
@@ -114,9 +115,15 @@ export function Navigation() {
           
           {/* Bouton CTA */}
           <div className="flex items-center">
-            <ShinyButton className="font-medium px-6 py-2 bg-gray-700 text-white">
+            <ShimmerButton 
+              className="font-medium px-6 py-2 !text-white"
+              shimmerColor="#ffffff"
+              background="rgba(31, 41, 55, 1)"
+              shimmerDuration="2s"
+              shimmerSize="0.1em"
+            >
               Prendre RDV
-            </ShinyButton>
+            </ShimmerButton>
           </div>
         </div>
       </div>
