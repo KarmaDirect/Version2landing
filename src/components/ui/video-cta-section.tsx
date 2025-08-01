@@ -2,10 +2,11 @@ import HeroVideoDialog from '@/components/magicui/hero-video-dialog'
 import { Meteors } from '@/components/magicui/meteors'
 import { ShimmerButton } from '@/components/magicui/shimmer-button'
 import { ShinyButton } from '@/components/magicui/shiny-button'
+import { NumberTicker } from '@/components/magicui/number-ticker'
 
 export function VideoCTASection() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden py-20 z-20 px-4">
+    <section className="test-section-2 min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden py-20 z-20 px-4">
       {/* Overlay sombre pour plus d'impact */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
       
@@ -78,18 +79,42 @@ export function VideoCTASection() {
         </p>
         
         {/* Statistiques */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
-          <div className="text-center p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
-            <div className="text-4xl font-bold text-white mb-2">2 semaines</div>
-            <div className="text-gray-300">Mise en place</div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 max-w-4xl mx-auto">
+          <div className="relative flex justify-center">
+            <div className="card stats-card">
+              <div className="text-center p-6 h-full flex flex-col justify-center">
+                <h3 className="text-5xl font-bold mb-4 text-gray-800">
+                  <NumberTicker value={7} className="text-5xl font-bold force-dark-gray" /> j
+                </h3>
+                <p className="text-gray-800 leading-relaxed text-base font-bold">
+                  Mise en place complète
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="text-center p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
-            <div className="text-4xl font-bold text-white mb-2">80%</div>
-            <div className="text-gray-300">Tâches automatisées</div>
+          <div className="relative flex justify-center">
+            <div className="card stats-card">
+              <div className="text-center p-6 h-full flex flex-col justify-center">
+                <h3 className="text-5xl font-bold mb-4 text-gray-800">
+                  <NumberTicker value={80} className="text-5xl font-bold force-dark-gray" />%
+                </h3>
+                <p className="text-gray-800 leading-relaxed text-base font-bold">
+                  Tâches automatisées
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="text-center p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10">
-            <div className="text-4xl font-bold text-white mb-2">250%</div>
-            <div className="text-gray-300">ROI moyen</div>
+          <div className="relative flex justify-center">
+            <div className="card stats-card">
+              <div className="text-center p-6 h-full flex flex-col justify-center">
+                <h3 className="text-5xl font-bold mb-4 text-gray-800">
+                  <NumberTicker value={250} className="text-5xl font-bold force-dark-gray" />%
+                </h3>
+                <p className="text-gray-800 leading-relaxed text-base font-bold">
+                  ROI moyen
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         

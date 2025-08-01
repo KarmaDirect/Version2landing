@@ -3,11 +3,13 @@ import { HeroSection } from '@/components/ui/hero-section'
 import { VideoCTASection } from '@/components/ui/video-cta-section'
 
 import { WhyChooseUsSection } from '@/components/ui/why-choose-us-section'
+import { MetricsSection } from '@/components/ui/metrics-section'
 import { UseCaseSection } from '@/components/ui/use-case-section'
 import { TestimonialsSection } from '@/components/ui/testimonials-section'
 import { PricingSection } from '@/components/ui/pricing-section'
 import { Footer } from '@/components/ui/footer'
 import { VelocityScroll } from '@/components/magicui/scroll-based-velocity'
+
 
 export default function Home() {
   return (
@@ -26,7 +28,10 @@ export default function Home() {
       {/* 3. Section "Pourquoi nous choisir" */}
       <WhyChooseUsSection />
       
-      {/* 4. Section "Cas d'usage" */}
+      {/* 4. Section Métriques */}
+      <MetricsSection />
+      
+      {/* 5. Section "Cas d'usage" */}
       <UseCaseSection />
       
       {/* 5. Section témoignages ou résultats */}

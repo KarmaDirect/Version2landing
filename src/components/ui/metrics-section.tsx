@@ -1,20 +1,18 @@
-import { Meteors } from "@/components/magicui/meteors"
-import { AnimatedBeamDemo } from "@/components/ui/animated-beam-demo"
 import { NumberTicker } from "@/components/magicui/number-ticker"
 
-export function WhyChooseUsSection() {
+export function MetricsSection() {
   return (
-    <section id="why-choose-us" className="test-section-2 min-h-screen flex items-center justify-center bg-gray-100 relative overflow-hidden py-20 z-20 px-4">
+    <section id="metrics" className="min-h-screen flex items-center justify-center bg-white relative overflow-hidden py-20 z-20 px-4">
       {/* Séparateur discret en haut */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent z-15"></div>
       {/* Fondu en bas pour transition avec la section suivante */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-15"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-100 to-transparent z-15"></div>
       
       <div className="container mx-auto px-4 text-center text-gray-800 z-20">
         <h2 className="text-4xl md:text-6xl font-bold mb-8 relative">
-          Pourquoi choisir{" "}
+          Nos{" "}
           <div className="relative inline-block ml-2">
-            <span className="relative z-10">Webstate</span>
+            <span className="relative z-10">Résultats</span>
             <svg 
               className="absolute -bottom-4 left-0 w-full h-4 z-0" 
               viewBox="0 0 100 15" 
@@ -30,79 +28,72 @@ export function WhyChooseUsSection() {
               />
             </svg>
           </div>{" "}
-          ?
+          Chiffrés
         </h2>
         
         <p className="text-xl md:text-2xl mb-16 max-w-3xl mx-auto text-gray-800">
-          Découvrez les avantages qui font de Webstate la solution d&apos;automatisation IA la plus performante
+          Des performances exceptionnelles qui parlent d&apos;elles-mêmes
         </p>
         
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-          {/* Bloc 1 - IA Avancée */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+          {/* Métrique 1 - Mise en place */}
           <div className="relative flex justify-center">
             <div className="card">
               <div className="text-center p-8 h-full flex flex-col justify-center">
-                <h3 className="text-3xl font-bold mb-6 text-gray-800">IA Avancée</h3>
+                <h3 className="text-4xl font-bold mb-6 text-gray-800">
+                  <NumberTicker value={2} className="text-4xl font-bold force-dark-gray" /> semaines
+                </h3>
                 <p className="text-gray-800 leading-relaxed text-lg font-bold">
-                  Automatisations intelligentes basées sur l&apos;intelligence artificielle de pointe pour optimiser vos processus
+                  Mise en place complète de votre solution d&apos;automatisation IA
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Bloc 2 - Clé en Main */}
+          {/* Métrique 2 - Tâches automatisées */}
           <div className="relative flex justify-center">
             <div className="card">
               <div className="text-center p-8 h-full flex flex-col justify-center">
-                <h3 className="text-3xl font-bold mb-6 text-gray-800">Clé en Main</h3>
+                <h3 className="text-4xl font-bold mb-6 text-gray-800">
+                  <NumberTicker value={80} className="text-4xl font-bold force-dark-gray" />%
+                </h3>
                 <p className="text-gray-800 leading-relaxed text-lg font-bold">
-                  Site web + automatisations : tout est inclus et prêt à l&apos;emploi en moins de 2 semaines
+                  De vos tâches répétitives automatisées grâce à notre IA
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Bloc 3 - ROI Garanti */}
+          {/* Métrique 3 - ROI */}
           <div className="relative flex justify-center">
             <div className="card">
               <div className="text-center p-8 h-full flex flex-col justify-center">
-                <h3 className="text-3xl font-bold mb-6 text-gray-800">ROI Garanti</h3>
+                <h3 className="text-4xl font-bold mb-6 text-gray-800">
+                  <NumberTicker value={250} className="text-4xl font-bold force-dark-gray" />%
+                </h3>
                 <p className="text-gray-800 leading-relaxed text-lg font-bold">
-                  Résultats mesurables et retour sur investissement rapide avec un ROI moyen de 250%
+                  ROI moyen constaté par nos clients après 6 mois d&apos;utilisation
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Bloc 4 - Support Premium */}
+          {/* Métrique 4 - Temps économisé */}
           <div className="relative flex justify-center">
             <div className="card">
               <div className="text-center p-8 h-full flex flex-col justify-center">
-                <h3 className="text-3xl font-bold mb-6 text-gray-800">Support Premium</h3>
+                <h3 className="text-4xl font-bold mb-6 text-gray-800">
+                  <NumberTicker value={15} className="text-4xl font-bold force-dark-gray" />h/semaine
+                </h3>
                 <p className="text-gray-800 leading-relaxed text-lg font-bold">
-                  Accompagnement personnalisé et support technique 24/7 pour garantir votre succès
+                  Temps économisé en moyenne par nos clients grâce aux automatisations
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Démonstration AnimatedBeam dans une card */}
-        <div className="flex justify-center mb-16">
-          <div className="card" style={{width: '800px', height: '500px'}}>
-            <div className="text-center p-12 h-full flex flex-col justify-center">
-              <h3 className="text-3xl font-bold mb-6 text-gray-800">Intégrations et Automatisations</h3>
-              <p className="text-gray-800 leading-relaxed text-lg mb-8 font-bold">
-                Découvrez nos automatisations en action
-              </p>
-              <div className="flex-1 flex items-center justify-center">
-                <AnimatedBeamDemo />
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Statistiques supplémentaires */}
+        {/* Statistiques supplémentaires avec le même style */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
           <div className="relative flex justify-center">
             <div className="card">
@@ -110,7 +101,7 @@ export function WhyChooseUsSection() {
                 <div className="text-4xl font-bold text-gray-800 mb-2">
                   <NumberTicker value={500} className="text-4xl font-bold force-dark-gray" />+
                 </div>
-                <div className="text-gray-800 font-bold">Clients satisfaits</div>
+                                 <div className="text-gray-800 font-bold">Clients satisfaits</div>
               </div>
             </div>
           </div>
@@ -120,7 +111,7 @@ export function WhyChooseUsSection() {
                 <div className="text-4xl font-bold text-gray-800 mb-2">
                   <NumberTicker value={15} className="text-4xl font-bold force-dark-gray" />k+
                 </div>
-                <div className="text-gray-800 font-bold">Heures économisées</div>
+                                 <div className="text-gray-800 font-bold">Heures économisées</div>
               </div>
             </div>
           </div>
@@ -130,7 +121,7 @@ export function WhyChooseUsSection() {
                 <div className="text-4xl font-bold text-gray-800 mb-2">
                   <NumberTicker value={98} className="text-4xl font-bold force-dark-gray" />%
                 </div>
-                <div className="text-gray-800 font-bold">Taux de satisfaction</div>
+                                 <div className="text-gray-800 font-bold">Taux de satisfaction</div>
               </div>
             </div>
           </div>
@@ -140,7 +131,7 @@ export function WhyChooseUsSection() {
                 <div className="text-4xl font-bold text-gray-800 mb-2">
                   <NumberTicker value={24} className="text-4xl font-bold force-dark-gray" />h
                 </div>
-                <div className="text-gray-800 font-bold">Installation</div>
+                                 <div className="text-gray-800 font-bold">Installation</div>
               </div>
             </div>
           </div>
@@ -148,4 +139,4 @@ export function WhyChooseUsSection() {
       </div>
     </section>
   )
-}
+} 

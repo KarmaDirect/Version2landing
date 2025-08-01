@@ -1,6 +1,6 @@
 export function TestimonialsSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 relative overflow-hidden py-20">
+    <section id="testimonials" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 relative overflow-hidden py-20">
       <div className="container mx-auto px-4 text-center text-white z-10">
         <h2 className="text-4xl md:text-6xl font-bold mb-8">
           Ils nous font confiance

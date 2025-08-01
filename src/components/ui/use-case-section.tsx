@@ -2,7 +2,7 @@ import { AnimatedGridPattern } from '@/components/magicui/animated-grid-pattern'
 
 export function UseCaseSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-gray-100 relative overflow-hidden py-20">
+    <section id="use-case" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-gray-100 relative overflow-hidden py-20">
       {/* Animated Grid Pattern background */}
       <AnimatedGridPattern 
         numSquares={50}
